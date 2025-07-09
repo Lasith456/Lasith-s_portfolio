@@ -143,7 +143,7 @@
                     <!-- Image Content -->
                     <div class="flex justify-center lg:justify-start pt-8 mx-auto anim-fade-in-up delay-200">
                         <div class="bg-white p-3 rounded-lg shadow-xl transform lg:rotate-6 hover:rotate-0 hover:scale-105 transition-transform duration-300 ease-in-out">
-                            <img src="./Subject.png" alt="A selfie of Lasith Vidurang" class="w-48 h-auto rounded-md">
+                            <img src="./Subject2.png" alt="A selfie of Lasith Vidurang" class="w-48 h-auto rounded-md">
                         </div>
                     </div>
                 </div>
@@ -179,18 +179,18 @@
                         Have a project in mind or want to connect? Feel free to send me a message.
                     </p>
                 </div>
-                <form class="max-w-xl mx-auto anim-fade-in-up delay-100">
+                <form action="https://formspree.io/f/xovwooyl" method="POST" class="max-w-xl mx-auto anim-fade-in-up delay-100">
                     <div class="mb-4">
                         <label for="name" class="block text-slate-700 text-sm font-bold mb-2">Name</label>
-                        <input type="text" id="name" class="shadow-sm appearance-none border border-slate-300 rounded w-full py-3 px-3 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-slate-400" />
+                        <input type="text" id="name" name="name" required class="shadow-sm appearance-none border border-slate-300 rounded w-full py-3 px-3 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-slate-400" />
                     </div>
                     <div class="mb-4">
                         <label for="email" class="block text-slate-700 text-sm font-bold mb-2">Email</label>
-                        <input type="email" id="email" class="shadow-sm appearance-none border border-slate-300 rounded w-full py-3 px-3 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-slate-400" />
+                        <input type="email" id="email" name="email" required class="shadow-sm appearance-none border border-slate-300 rounded w-full py-3 px-3 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-slate-400" />
                     </div>
                     <div class="mb-6">
                         <label for="message" class="block text-slate-700 text-sm font-bold mb-2">Message</label>
-                        <textarea id="message" rows="5" class="shadow-sm appearance-none border border-slate-300 rounded w-full py-3 px-3 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-slate-400"></textarea>
+                        <textarea id="message" name="message" rows="5" required class="shadow-sm appearance-none border border-slate-300 rounded w-full py-3 px-3 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-slate-400"></textarea>
                     </div>
                     <div class="text-center">
                         <button type="submit" class="bg-slate-900 text-white font-bold py-3 px-8 rounded-full hover:bg-slate-700 transition-all duration-300 transform hover:scale-105">
@@ -208,12 +208,6 @@
 
     </div>
 
-    <!-- This script section simulates a separate data.js file -->
-    <script>
-        // --- Portfolio and Services Data ---
-        
-    </script>
-    
     <!-- This script handles the main logic for the page -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
