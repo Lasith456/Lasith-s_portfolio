@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lasith Viduranga - Fullstack Developer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Custom Styles for Animations & Rich Look -->
+         <script src="./script.js"></script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        /* Simple class for vertical text */
+        .writing-mode-vertical-lr {
+            writing-mode: vertical-lr;
+        }
+        
+        /* Base styles for elements that will be animated */
+        .anim-fade-in, .anim-fade-in-up, .anim-fade-in-left, .anim-fade-in-right {
+            opacity: 0;
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .anim-fade-in-up {
+            transform: translateY(20px);
+        }
+        .anim-fade-in-left {
+            transform: translateX(-20px);
+        }
+        .anim-fade-in-right {
+            transform: translateX(20px);
+        }
+
+        /* The state when the element becomes visible */
+        .is-visible {
+            opacity: 1;
+            transform: none;
+        }
+        
+        /* Staggered animation delay helper classes */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+        .delay-400 { transition-delay: 400ms; }
+        .delay-500 { transition-delay: 500ms; }
+
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700">
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4 lg:p-8">
+
+        <!-- Header & Navigation -->
+        <header class="fixed top-0 left-0 right-0 z-50 bg-slate-50/80 backdrop-blur-sm">
+            <div class="container mx-auto flex justify-between items-center p-4 border-b border-slate-200/80">
+                <a href="#home" class="text-xl font-bold text-slate-900">Lasith</a>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                    <a href="#about" class="hover:text-slate-900 transition-colors">About Me</a>
+                    <a href="#portfolio" class="hover:text-slate-900 transition-colors">Portfolio</a>
+                    <a href="#services" class="hover:text-slate-900 transition-colors">Services</a>
+                    <a href="#contact" class="hover:text-slate-900 transition-colors">Contact</a>
+                    <a href="cv.pdf" download class="bg-slate-900 text-white font-bold text-xs py-2 px-4 rounded-full hover:bg-slate-700 transition-colors">
+                        DOWNLOAD CV
+                    </a>
+                </nav>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden z-50 text-slate-900">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </header>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden fixed inset-0 bg-white z-40 flex flex-col items-center justify-center">
+             <nav class="flex flex-col items-center space-y-8 text-2xl font-medium text-slate-800">
+                <a href="#about" class="mobile-menu-link">About Me</a>
+                <a href="#portfolio" class="mobile-menu-link">Portfolio</a>
+                <a href="#services" class="mobile-menu-link">Services</a>
+                <a href="#contact" class="mobile-menu-link">Contact</a>
+                <a href="cv.pdf" download class="mobile-menu-link bg-slate-900 text-white text-lg mt-4 py-3 px-6 rounded-full">
+                    Download CV
+                </a>
+            </nav>
+        </div>
+
+
+        <!-- Main Content -->
+        <main class="pt-24">
+
+            <!-- ========= -->
+            <!-- Hero Section -->
+            <!-- ========= -->
+            <section id="home" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[calc(100vh-6rem)]">
+                <!-- Left Content -->
+                <div class="flex items-start space-x-4 sm:space-x-8">
+                    <div class="flex flex-col items-center self-stretch anim-fade-in-left">
+                        <p class="text-xs font-mono writing-mode-vertical-lr transform rotate-180 text-slate-400 my-4 whitespace-nowrap">FullStack Developer</p>
+                        <div class="w-px flex-grow bg-slate-300"></div>
+                        <p class="text-xs font-mono writing-mode-vertical-lr text-slate-400 my-4">2025</p>
+                    </div>
+                    <div class="pt-16">
+                        <p class="text-lg font-semibold text-slate-500 anim-fade-in-up">10+ Project Completed</p>
+                        <h1 class="text-7xl md:text-8xl font-extrabold my-4 text-slate-900 anim-fade-in-up delay-100">HELLO</h1>
+                        <p class="text-lg text-slate-600 anim-fade-in-up delay-200">It's Lasith Viduranga (FullStack Developer)</p>
+                        <div class="mt-8 anim-fade-in-up delay-300">
+                            <a href="cv.pdf" download class="bg-slate-900 text-white font-bold py-3 px-8 rounded-full hover:bg-slate-700 transition-all duration-300 transform hover:scale-105 inline-block">
+                                Download CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Image -->
+                <div class="w-full h-full flex items-center justify-center anim-fade-in-right delay-400">
+                    <div class="p-2 bg-gradient-to-br from-slate-200 to-slate-300 rounded-lg shadow-2xl">
+                        <img src="./Subject.png" alt="A portrait of Lasith Vidurang" class="w-full max-w-md lg:max-w-full h-auto object-cover rounded-lg">
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========= -->
+            <!-- About Me Section -->
+            <!-- ========= -->
+            <section id="about" class="py-24">
+                 <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 items-start">
+                    <!-- Text Content -->
+                    <div class="lg:col-span-2">
+                        <h2 class="text-4xl font-bold mb-8 text-slate-900 anim-fade-in-up">About Me</h2>
+                        <p class="text-base text-slate-600 leading-relaxed max-w-2xl anim-fade-in-up delay-100">
+                            A highly driven Full stack developer with a solid foundation in modern programming languages and software development. Dedicated to building efficient, full-stack applications and solving complex problems. Passionate about learning and leveraging technical expertise to create practical solutions for real-world challenges.
+                        </p>
+                    </div>
+
+                    <!-- Image Content -->
+                    <div class="flex justify-center lg:justify-start pt-8 mx-auto anim-fade-in-up delay-200">
+                        <div class="bg-white p-3 rounded-lg shadow-xl transform lg:rotate-6 hover:rotate-0 hover:scale-105 transition-transform duration-300 ease-in-out">
+                            <img src="./Subject.png" alt="A selfie of Lasith Vidurang" class="w-48 h-auto rounded-md">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ========= -->
+            <!-- Portfolio Section -->
+            <!-- ========= -->
+            <section id="portfolio" class="py-24 bg-white -mx-4 px-4 lg:-mx-8 lg:px-8 rounded-lg shadow-inner">
+                <h2 class="text-4xl font-bold mb-12 text-center text-slate-900 anim-fade-in-up">Portfolio</h2>
+                <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Portfolio items will be injected here by JavaScript -->
+                </div>
+            </section>
+
+            <!-- ========= -->
+            <!-- Services Section -->
+            <!-- ========= -->
+            <section id="services" class="py-24">
+                <h2 class="text-4xl font-bold mb-12 text-center text-slate-900 anim-fade-in-up">Services</h2>
+                <div id="services-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <!-- Services will be injected here by JavaScript -->
+                </div>
+            </section>
+
+            <!-- ========= -->
+            <!-- Contact Section -->
+            <!-- ========= -->
+            <section id="contact" class="py-24 bg-white -mx-4 px-4 lg:-mx-8 lg:px-8 rounded-lg shadow-inner">
+                <div class="anim-fade-in-up">
+                    <h2 class="text-4xl font-bold mb-8 text-center text-slate-900">Contact Me</h2>
+                    <p class="text-center text-slate-600 max-w-lg mx-auto mb-12">
+                        Have a project in mind or want to connect? Feel free to send me a message.
+                    </p>
+                </div>
+                <form class="max-w-xl mx-auto anim-fade-in-up delay-100">
+                    <div class="mb-4">
+                        <label for="name" class="block text-slate-700 text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="name" class="shadow-sm appearance-none border border-slate-300 rounded w-full py-3 px-3 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-slate-400" />
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-slate-700 text-sm font-bold mb-2">Email</label>
+                        <input type="email" id="email" class="shadow-sm appearance-none border border-slate-300 rounded w-full py-3 px-3 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-slate-400" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-slate-700 text-sm font-bold mb-2">Message</label>
+                        <textarea id="message" rows="5" class="shadow-sm appearance-none border border-slate-300 rounded w-full py-3 px-3 text-slate-700 leading-tight focus:outline-none focus:ring-2 focus:ring-slate-400"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-slate-900 text-white font-bold py-3 px-8 rounded-full hover:bg-slate-700 transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="text-center py-8 mt-16 border-t border-slate-200">
+            <p class="text-slate-500 text-sm">&copy; 2025 Lasith Vidurang. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- This script section simulates a separate data.js file -->
+    <script>
+        // --- Portfolio and Services Data ---
+        
+    </script>
+    
+    <!-- This script handles the main logic for the page -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Logic ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden');
+                document.body.style.overflow = mobileMenu.classList.contains('hidden') ? '' : 'hidden';
+                mobileMenuButton.innerHTML = mobileMenu.classList.contains('hidden')
+                    ? `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>`
+                    : `<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>`;
+            };
+
+            mobileMenuButton.addEventListener('click', toggleMenu);
+            mobileMenuLinks.forEach(link => link.addEventListener('click', () => {
+                // Ensure menu closes before trying to scroll
+                if (!mobileMenu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            }));
+
+            // --- Dynamic Content Population ---
+            const portfolioGrid = document.getElementById('portfolio-grid');
+            const servicesGrid = document.getElementById('services-grid');
+
+            if (portfolioGrid) {
+                portfolioGrid.innerHTML = portfolioData.map((project, index) => `
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 anim-fade-in-up" style="transition-delay: ${index * 100}ms;">
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">${project.title}</h3>
+                        <p class="text-slate-600">${project.description}</p>
+                    </div>
+                `).join('');
+            }
+
+            if (servicesGrid) {
+                servicesGrid.innerHTML = servicesData.map((service, index) => `
+                    <div class="bg-white border border-slate-200 p-8 rounded-lg shadow-sm hover:shadow-lg transition-shadow anim-fade-in-up" style="transition-delay: ${index * 100}ms;">
+                        <h3 class="text-xl font-bold mb-2 text-slate-800">${service.title}</h3>
+                        <p class="text-slate-600">${service.description}</p>
+                    </div>
+                `).join('');
+            }
+
+
+            // --- Scroll Animation Logic ---
+            // We select ALL elements that need animation, including the newly added ones.
+            const animatedElements = document.querySelectorAll('.anim-fade-in, .anim-fade-in-up, .anim-fade-in-left, .anim-fade-in-right');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Animate only once
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
