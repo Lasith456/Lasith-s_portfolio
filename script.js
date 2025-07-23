@@ -17,6 +17,12 @@ const portfolioData = [
         github: "https://github.com/Lasith456/advancedServerSideCW2",
         liveDemo: "https://www.youtube.com/watch?v=5qJZfDLsvQ4"
     },
+        {
+        title: "Country API Key",
+        description: "Country Info API System A full-stack application built with React, Node.js, Express, SQLite, and Docker. It allows users to fetch country details via a secure API. The system supports two user roles and features API key generation. Only users with a valid API key can access country data.",
+        github: "https://github.com/Lasith456/advancedServerSideCW1.git", 
+        liveDemo: "https://youtu.be/gnx3EcdiM_8"
+    },
     {
         title: "Southern Province Vehicle Management",
         description: "A system for registering and tracking school transport, built using Vue.js, Express.js, and MongoDB.",
